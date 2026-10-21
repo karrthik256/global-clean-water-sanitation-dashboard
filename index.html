@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDG 6 — Clean Water &amp; Sanitation Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>SDG 6 — Clean Water &amp; Sanitation</h1>
+    <p>Global household access · WHO/UNICEF JMP 2025 · 2000–2024</p>
+  </header>
+
+  <div class="control-bar">
+    <div class="control-group">
+      <span>Topic</span>
+      <button class="topic-btn active" data-topic="water">Water</button>
+      <button class="topic-btn" data-topic="sanitation">Sanitation</button>
+    </div>
+    <div class="control-group">
+      <span>Year</span>
+      <input type="range" id="year-slider" min="2000" max="2024" step="1" value="2024" />
+      <span id="year-label">2024</span>
+    </div>
+    <div class="control-group">
+      <span>Region</span>
+      <select id="region-select"></select>
+    </div>
+  </div>
+
+  <main class="dashboard-grid">
+    <section class="panel">
+      <h2>Q1 · Where access is lowest</h2>
+      <p class="subtitle">Choropleth map · safely managed access by country · zoom / pan</p>
+      <div id="viz1" class="chart-container"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Q1 · Most underserved &amp; best</h2>
+      <p class="subtitle">Ranked bar · bottom 10 / top 10 (%)</p>
+      <div id="viz2" class="chart-container"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Q2 · Progress &amp; the 2030 target</h2>
+      <p class="subtitle">Multi-line · global safely managed (%), animated, projected to 2030</p>
+      <div id="viz3" class="chart-container"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Q2 · Service levels over time</h2>
+      <p class="subtitle">Stacked area · global distribution across service levels, 2000–2024</p>
+      <div id="viz4" class="chart-container"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Q3 · Water vs sanitation by income</h2>
+      <p class="subtitle">Scatter · each dot = country, size = population</p>
+      <div id="viz5" class="chart-container"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Q3 · Coverage by income group</h2>
+      <p class="subtitle">Grouped bar · safely managed (%) by income group</p>
+      <div id="viz6" class="chart-container"></div>
+    </section>
+  </main>
+
+  <!-- Vendor libraries (vendored locally so the dashboard works offline) -->
+  <script src="lib/d3.v7.min.js"></script>
+  <script src="lib/topojson-client.min.js"></script>
+
+  <!-- Shared plumbing -->
+  <script src="js/state.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/data.js"></script>
+
+  <!-- Charts -->
+  <script src="js/charts/viz1-choropleth.js"></script>
+  <script src="js/charts/viz2-ranked-bar.js"></script>
+  <script src="js/charts/viz3-multiline.js"></script>
+  <script src="js/charts/viz4-stacked-area.js"></script>
+  <script src="js/charts/viz5-scatter.js"></script>
+  <script src="js/charts/viz6-grouped-bar.js"></script>
+
+  <!-- Orchestration -->
+  <script src="js/main.js"></script>
+</body>
+</html>
