@@ -5,8 +5,7 @@ An interactive D3.js data visualization dashboard designed to track global progr
 This project was developed for the Data Visualization (CDS 6324) course at Multimedia University (MMU). For a comprehensive breakdown of the methodology, insights, and challenges, please refer to the official project document: **TT5L_G4_Project_Report.pdf**.
 
 ## Data Source
-The dashboard utilizes the **WHO/UNICEF Joint Monitoring Programme (JMP) 2025 Household Data**. The dataset tracks 232 countries and areas, analyzing household-level access to safely managed water and sanitation facilities. 
-
+The dashboard utilizes the [WHO/UNICEF Joint Monitoring Programme (JMP) 2025 Household Data](https://washdata.org/data). The dataset tracks 232 countries and areas, analyzing household-level access to safely managed water and sanitation facilities.
 ## Key Analytical Questions & Dashboard Previews
 
 ### Q1: Geographic Deficits
